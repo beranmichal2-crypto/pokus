@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="cs">
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>SPD QR Generator</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>SPD QR Generator</h1>
+  <section>
+    <label>Nahraj Excel (.xlsx): <input id="fileInput" type="file" accept=".xlsx" /></label>
+    <button id="previewBtn">Náhled</button>
+    <button id="selectOut">Vybrat výstupní složku</button>
+    <span id="outFolder">(výstupní složka: neuvedeno)</span>
+  </section>
+  <section id="mappingSection" style="display:none;">
+    <h2>Mapování sloupců (automatické pokud názvy odpovídají)</h2>
+    <div id="mappings"></div>
+    <button id="generateBtn">Generovat QR (PNG)</button>
+  </section>
+  <section id="progressSection" style="display:none;">
+    <h3>Průběh</h3>
+    <pre id="log"></pre>
+  </section>
+
+  <script src="renderer.js"></script>
+</body>
+</html>

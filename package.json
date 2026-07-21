@@ -1,0 +1,31 @@
+{
+  "name": "spd-qrcode-app",
+  "version": "0.1.0",
+  "description": "Desktop app to generate SPD QR codes from Excel (Electron)",
+  "main": "src/main.js",
+  "scripts": {
+    "start": "electron .",
+    "dist": "electron-builder --win x64"
+  },
+  "author": "beranmichal2-crypto",
+  "license": "MIT",
+  "dependencies": {
+    "qrcode": "^1.5.1",
+    "xlsx": "^0.18.5",
+    "electron": "^25.0.0"
+  },
+  "devDependencies": {
+    "electron-builder": "^23.6.0"
+  },
+  "build": {
+    "appId": "cz.beranmichal2.spdqrcode",
+    "files": ["**/*"],
+    "win": {
+      "target": ["nsis"],
+      "icon": "build/icon.ico"
+    },
+    "directories": {
+      "buildResources": "build"
+    }
+  }
+}
